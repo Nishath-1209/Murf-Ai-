@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Voice Agent - TTS + Echo Bot</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            color: white;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px;
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            outline: none;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"]:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #2980b9, #27ae60);
+        }
+
+        audio {
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        #uploadStatus {
+            margin-top: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎙 AI Voice Agent</h1>
+        <p>Text-to-Speech & Echo Bot</p>
+    </header>
+
+    <div class="section">
+        <h2>🗣 Text to Speech</h2>
+        <input type="text" id="textInput" placeholder="Type something..." />
+        <button onclick="generateAudio()">Generate Audio</button>
+        <audio id="audioPlayer" controls></audio>
+    </div>
+
+    <div class="section">
+        <h2>🎧 Echo Bot</h2>
+        <button id="startRecording">Start Recording</button>
+        <button id="stopRecording" disabled>Stop Recording</button>
+        <audio id="echoAudio" controls></audio>
+        <p id="uploadStatus"></p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

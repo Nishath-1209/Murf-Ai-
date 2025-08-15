@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Voice Agent - Day 9</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #e4ebf0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: #2c3e50;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #34495e;
+        }
+
+        .section {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            width: 100%;
+            max-width: 650px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 10px;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 4px rgba(52, 152, 219, 0.3);
+        }
+
+        button {
+            padding: 10px 18px;
+            font-size: 15px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: background 0.2s ease, transform 0.1s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #2980b9, #1f6690);
+        }
+
+        button:active {
+            transform: scale(0.97);
+        }
+
+        audio {
+            margin-top: 15px;
+            width: 100%;
+            max-width: 450px;
+            border-radius: 8px;
+        }
+
+        p {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎙️ AI Voice Agent</h1>
+
+    <div class="section">
+        <h2>🎤 Text to Speech</h2>
+        <input type="text" id="textInput" placeholder="Type something..." />
+        <br>
+        <button onclick="generateAudio()">Generate Audio</button>
+        <audio id="audioPlayer" controls></audio>
+    </div>
+
+    <div class="section">
+        <h2>🎧 Echo Bot</h2>
+        <button id="startRecording">Start Recording</button>
+        <button id="stopRecording" disabled>Stop Recording</button>
+        <audio id="echoAudio" controls></audio>
+        <p id="uploadStatus"></p>
+    </div>
+
+    <div class="section">
+        <h2>🧠 LLM Conversation</h2>
+        <button id="startLLM">Start LLM Recording</button>
+        <button id="stopLLM" disabled>Stop LLM Recording</button>
+        <audio id="llmAudio" controls></audio>
+        <p id="llmStatus"></p>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Echo Bot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <h1 class="title">🎤 Echo Bot</h1>
+        <p class="subtitle">Your AI Conversational Partner</p>
+
+        <div class="voice-select">
+            <label for="voiceSelect">Select a Voice:</label>
+            <select id="voiceSelect" class="dropdown">
+                <option>Eric (male)</option>
+                <option>Anna (female)</option>
+            </select>
+        </div>
+
+        <button id="recordBtn" class="mic-btn">🎤</button>
+        <p id="status">Ready</p>
+
+        <div id="chatBox" class="chat-box">
+            <div class="message user">You: "Do you remember my name?"</div>
+            <div class="message bot">Reply: "Yes, I remember you said your name is Nishath Tabassum."</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

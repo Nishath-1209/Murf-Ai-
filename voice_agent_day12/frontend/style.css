@@ -1,0 +1,89 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1a3c8b, #0d2d6c);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: #2d4d87;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    width: 380px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #cdd4e0;
+    margin-bottom: 20px;
+}
+
+.voice-select {
+    margin-bottom: 15px;
+}
+
+label {
+    margin-right: 8px;
+}
+
+.dropdown {
+    padding: 6px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.mic-btn {
+    background: linear-gradient(145deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mic-btn:active {
+    transform: scale(0.95);
+}
+
+#status {
+    font-size: 0.85rem;
+    margin-top: 10px;
+    color: #cdd4e0;
+}
+
+.chat-box {
+    margin-top: 15px;
+    text-align: left;
+}
+
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 8px;
+    font-size: 0.9rem;
+}
+
+.user {
+    background: #2563eb;
+    color: white;
+}
+
+.bot {
+    background: #facc15;
+    color: black;
+}
